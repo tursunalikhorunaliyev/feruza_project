@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/screens/sign_in_screen.dart';
 import 'package:flutter_application_5/widgets/custom_textfield.dart';
 import 'package:flutter_application_5/widgets/next_button.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -174,12 +175,22 @@ class GetStart extends StatelessWidget {
                     const SizedBox(
                       width: 4,
                     ),
-                    Text(
-                      "Log In",
-                      style: GoogleFonts.montserrat(
-                        fontSize: 13,
-                        color: const Color(0xFFFFC33E),
-                        fontWeight: FontWeight.bold,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignIn(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "Log In",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 13,
+                          color: const Color(0xFFFFC33E),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
